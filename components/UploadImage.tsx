@@ -29,7 +29,7 @@ export default function UploadImage({predictedValue}:props){
     const formData =new FormData();
     formData.append('file', arg.target.files[0])
 
-    await axios.put('https://3.230.115.124:8000/api/predict/file', formData)
+    await axios.put('http://3.230.115.124:8000/api/predict/file', formData)
       .then(res => {
         predictedValue(res.data)
       })
